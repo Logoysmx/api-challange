@@ -1,11 +1,15 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+import bodyParser from 'body-parser';
+import response from './network/response';
 
-var app = express();
+let router = express.Router();
+let app = express();
+
 app.use(router);
+app.use(bodyParser.json({extended: false}));
 
-router.get('/', function(req, res) {
-    res.send('hello');
+router.get('/message', function(req, res) {
+    response.success(req, res);
 });
 
 app.listen(3000);
