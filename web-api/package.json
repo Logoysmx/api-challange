@@ -4,14 +4,16 @@
   "description": "Oyster web API",
   "main": "index.js",
   "scripts": {
-    "init": "nodemon --exec babel-node server", 
+    "init": "nodemon --exec babel-node server",
     "build": "babel src/ --out-dir build",
     "serve": "node build/server.js"
   },
   "author": "Isaac Fraire Heredia",
   "license": "MIT",
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.7"
   },

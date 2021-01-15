@@ -1,7 +1,7 @@
-exports.success = function(req, res) {
-    res.send('test');
+exports.success = (req, res, msg) => {
+    res.send(msg);
 }
 
-exports.error = function(req, res) {
+exports.error = (req, res) => {
     
 }
